@@ -8,12 +8,13 @@ import Session from "./components/Session";
 import Register from "./components/Register";
 import Confirmation from "./components/Confirmation";
 function App() {
+  const title = "SWAMii Technology and Business Solutions";
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home title="SWAMii" />} />
-        <Route path="about" element={<About />} />
+        <Route path="/" element={<Home title={title} />} />
+        <Route path="about" element={<About title={title} />} />
         <Route path="categories" element={<Categories />}>
           <Route path=":catId" element={<Category />}>
             <Route path=":sessionId" element={<Session />} />
